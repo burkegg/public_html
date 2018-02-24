@@ -1,0 +1,24 @@
+{
+  "name": "public_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burkegg/public_html.git"
+  },
+  "author": "Burke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burkegg/public_html/issues"
+  },
+  "homepage": "https://github.com/burkegg/public_html#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
