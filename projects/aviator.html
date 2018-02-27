@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title> Major Project: Audacious Aviator </title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../tutorials/tutorials.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="house.html">Draw a House</a>
+            <a class="dropdown-item" href="fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> Audacious Aviator </h1>
+        </div>
+        <div class="col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2>  Audacious Aviator, Part 1 </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_dgDJhL7-HY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Starter Code</figcaption>
+        <pre>
+        <code>
+
+          class Cloud{
+                /*
+                A class to show and animate clouds on the screen.
+                */
+
+                float size1;
+                float size2;
+                float x;
+                float y;
+                float separation;
+
+                Cloud(){
+                  size1 = random(20, 40);
+                  size2 = random(20, 40);
+                  separation = random(15, 40);
+                  x = width + size1;
+                  y = random(0, height);
+                }
+
+                void display(){
+                  /*
+                  Draw ellipses that look like clouds!
+                  Use variables to keep track of their positions and sizes.
+                  Separation should spread them out a little bit.
+                  */
+
+                }
+                void wind(){
+                  /*
+                  Update the horizontal position of the cloud.  It should move it across the screen.
+                  */
+                }
+            }
+          <!-- Code goes here -->
+
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Audacious Aviator: Part 2 </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QCa77htM_cs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Test Code and Starter Code</figcaption>
+        <pre>
+            <code>
+
+              // Test code for your main window, if you like.
+                  Timer t;
+                  int shade = 0;
+                  void setup(){
+                    size(200, 500);
+                    t = new Timer(2000);
+                    t.getStartTime();
+                  }
+
+                  void draw(){
+                    background(shade);
+                    if (t.checkTime() == true) {
+                      shade += 50;
+                      t.getStartTime();
+                    }
+                  }
+
+
+
+                // This goes in your timer class window.
+                class Timer {
+                  /*
+                  A timer where you can give an amount of time as an argument upon creation.
+                   It will return true once time is up and false otherwise.
+                   It will need two methods: getStartTime and checkTime.
+                   */
+
+                  // Class variables
+                  int startTime;  // This will keep track of the moment when you start a timer.
+                  int runTime;    // This will keep track of how long you want to time for.
+
+                    Timer(int tempAmtToTime) {
+                    // Here you should assign the value of runTime.  You should initialize it to the temporary variable.
+
+                }
+
+                  void getStartTime() {
+                    //  Here you should use the command millis() to get the current time,
+                    //  and then assign that to startTime.
+                  }
+
+                  boolean checkTime() {
+                    /* Here you should check whether or not the timer is up.  Here is the logic:
+
+                     If the current time (given by millis()) is greater than the startTime plus the amount of time
+                     the timer was supposed to run for, return true.
+                     Otherwise, return false.
+                     */
+                     return false;  // This line is here so that you can work on other things without seeing an error message.
+                  }
+                }
+              <!-- Code goes here -->
+
+            </code>
+          </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Audacious Aviator, Part 3 - Obstacles </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Un7wvqbBNY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Test Code and Obstacle Skeleton</figcaption>
+        <pre>
+                <code>
+
+                  /*
+                  Test code for Obstacle class.  Put this in your main window
+                  to test your Obstacle class.  This should replace the code in your
+                  main window from before.
+
+                   Requirements:
+                   1:  The obstacle appears from beyond the right side and
+                   .   scrolls from right to left.
+                   2:  The obstacle takes an integer as an argument and
+                   .   the bigger the number, the faster the obstacle moves.
+                   3:  The println statement reads false while the obstacle is
+                   .   on screen, and false once it has left the screen.
+                   */
+
+
+
+
+                  Obstacle testObstacle;
+                  int testLevel = 1;
+
+                  void setup() {
+                    size(500, 500);
+                    testObstacle = new Obstacle(testLevel);
+                  }
+
+                  void draw() {
+                    background(255);
+                    println(testObstacle.edgeCheck());
+                    testObstacle.scroll();
+                    testObstacle.display();
+                  }
+
+
+                  // This goes in a new tab, called Obstacle.  You should
+                  // now have three tabs: Obstacle, Cloud, Timer.
+
+                  /*
+                  The obstacle class should have the following methods:
+                   1:  scroll()  This should move the obstacles left.
+                   2:  display()  This should make the obstacle appear.
+                   3:  edgeCheck() This should return true if the obstacles
+                   leave the screen, and false otherwise.
+                   */
+
+                  class Obstacle {
+                    color obsColor;
+                    float x;
+                    float y;
+                    float velocity;
+                    int level; // We will use this to determine how fast our obstacles scroll.
+
+
+                    Obstacle(int tempLevel) {
+                      rectMode(CENTER);
+                      // Initialize the class variables.  Remember to set level equal to the
+                      // temporary variable "tempLvel."
+                    }
+
+                    void display() {
+                      //  This method should display an obstacle
+                    }
+
+                    void scroll() {
+                      // Moves the obstacle to the left.
+                      // Make the horizontal position scroll left as a function
+                      // of the velocity and the level - that way it will get faster over time.
+                    }
+
+                    boolean edgeCheck() {
+                      // Returns true if the obstacle has moved off the left of the screen.
+                      return false;  // This is a placeholder so that you can test your code.
+                    }
+                  }
+                  <!-- Code goes here -->
+
+                </code>
+              </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Audacious Aviator, Part 4 - Flyer object display </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fq54SFhhMHc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Test Code and Flyer Skeleton</figcaption>
+        <pre>
+                    <code>
+                      /*
+                    Flyer Class, part 1:  Test code.  Replace the code in your
+                    main window with the following.
+
+                     Requirements:
+
+                     a:  Make the display() method work. Flyer appears in center.
+                     b:  GiveLives() should set the number of lives.
+                     */
+                    Flyer f;
+
+                    void setup() {
+                      size(600, 600);
+                      f = new Flyer();
+
+                      println("Part 1 Test begin:");
+                      f.display();
+                      println("Lives at start: " + f.getLives());
+                      println("Testing isAlive(), should return false: " + f.isAlive());
+                      f.giveLives();
+                      println("Lives after giveLives():  " + f.getLives());
+                      println("Testing isAlive(), should return true: " +f.isAlive());
+                      println("Part 1 Test end.");
+                    }
+
+                    void draw() {
+                    }
+
+
+
+                    // Add a new tab called Flyer.  You should now have four tabs.
+                    /*
+                     Flyer class, part 1
+
+                     1:  Declare and initialize variables that make sense.
+                     2:  Add the simpler methods:
+                     .      display()
+                     .      giveLives()
+                     .      isAlive()
+                     .      getLives()
+
+                     */
+
+                    class Flyer {
+
+                      color c;
+                      int rad, lives;
+                      float y_loc;
+                      float x_loc;
+                      float vel;
+                      float accel;
+                      float flap;
+                      float grav;
+
+                      Flyer() {
+                        lives = 0;
+                        c = color(155, 0, 255);
+                        y_loc = height/2;
+                        x_loc = width/2;
+                        vel = 0;
+                        accel = 0;
+                        flap = -5.0;
+                        rad = 20;
+                        grav = 0.2;
+                      }
+
+                      void giveLives() {
+                        /*
+                        Set the class variable lives to 3.
+                        */
+
+                      }
+
+                      void display() {
+                        /*
+                        Make a simple ellipse to represent your flyer.
+                        You can make it more complicated AFTER you have the rest of the program working.
+                        */
+
+                      }
+
+
+                      boolean isAlive() {
+                        /*
+                        If the number of lives is greater than zero, return true.
+                        Otherwise, return false.
+                        */
+
+                      }
+
+                      int getLives() {
+                        /*
+                        return the number of lives.
+                        */
+                      }
+                      <!-- Code goes here -->
+
+                    </code>
+                  </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Audacious Aviator Part 5: moving your aviator with forces</h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/V6-dX8-B3NU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Flyer Class Part 2</figcaption>
+        <pre>
+          <code>
+            /*
+                  Flyer class, Part 2 test code.
+
+                  Put this in your main window.
+
+                   Requirements:
+
+                   The ball should now go up and down based on gravity, and whether or not
+                   you press the up arrow.
+                   */
+
+                  Flyer f;
+                  void setup() {
+                    size(600, 600);
+                    f = new Flyer();
+                  }
+
+                  void draw() {
+                    background(50, 50, 200);
+                    f.display();
+                    f.update();
+
+                    // Un-comment method calls when you are ready to test them.
+
+                    // f.grav();
+                    // f.flap();
+                  }
+
+
+                  /*
+                   Flyer class, part 2
+
+                   .  Add the physics methods:
+                   .      flap()
+                   .      grav()
+                   .      forces()
+                   .      update()
+                   ***NOTE***
+                   **** You will need to add these methods in to your Flyer class.****
+                   */
+
+
+                  void forces(float f) {
+                  /*
+                  Add a force to acceleration.
+                   */
+                }
+
+                void update() {
+                  /*
+                   Add the acceleration to the velocity.
+                   Add the velocity to the location.
+                   Set the acceleration to zero.
+                   Try the constrain() function to make the flyer look better.
+                   */
+
+
+                }
+                void flap() {
+                  /*
+                  If a key is pressed, and if it's coded, and if it's the UP key,
+                   call the forces() method with flap as the argument.
+                   Otherwise, do nothing.
+                   */
+
+                }
+                void grav() {
+                  /*
+                  call the forces method with gravity as the argument.
+                   */
+                }
+
+          </code>
+        </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+  </div>
+  <!-- Latest compiled and minified JavaScript -->
+
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title> Processing Tutorials: Conditionals </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tutorials.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects/projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../projects/house.html">Draw a House</a>
+            <a class="dropdown-item" href="../projects/fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="../projects/aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> Conditionals </h1>
+        </div>
+        <div class = "col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Activity 1:  Sunset </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/aGIbyTAg4aU"
+        frameborder="0" allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Example Code</figcaption>
+        <pre>
+        <code>
+          /*
+          Here is your homework for Conditionals Pt 1.
+          Please fill in the missing information to make
+          the sky turn red as the sun goes down.
+          */
+
+        int blue;
+        // Declare a variable for red here.
+
+        void setup() {
+          size(600, 600);
+          blue = 255;
+          // Initialize red variable here.
+        }
+
+        void draw() {
+          background(red, 0, blue);
+
+          fill(250, 250, 0);
+          ellipse(mouseX, mouseY, 75, 75);
+          fill(0, 255, 0);
+          rect(0, height/2, width, height/2);
+          if (mouseY > height/2 + diameter/2) {
+            blue = 0;
+          } else if (mouseY > height/2 - diameter/2) {
+            blue = 155;
+            // Assign red a value here.
+          } else {
+            blue = 255;
+            // Return red to its original value.
+          }
+        }
+
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Activity 2: A simple button </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FcRZwpwEL_I" frameborder="0" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Example Code</figcaption>
+        <pre>
+        <code>
+          /*
+      Here is your homework for conditionals pt 2.
+      A sketch to introduce using multiple conditionals
+      and boolean variables.
+      Assignment:  Make the background turn back to white if
+      the user clicks in the top left quadrant.
+      */
+
+      int back_g;
+      void setup() {
+        size(400, 400);
+        back_g = 255;
+      }
+
+      void draw() {
+        background(back_g);
+        fill(175);
+        rect(width/2, 0, width/2, height/2);
+        if ((mousePressed == true) && (mouseX > width/2) && (mouseY < height/2)) {
+          back_g = 0;
+        }
+        // Put your if statement here.  You can use the one above and modify it.
+
+      }
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Activity 3: Logical Operators (and bouncing!) </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tg4ENwP-mqE" frameborder="0" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Code Title</figcaption>
+        <pre>
+        <code>
+          /*
+          Ball bouncing off edges
+          Physics 1 and logical operators (or:  ||   )
+          Assignment:  Inside the if statements, make something else happen
+          on the screen whenever the ball bounces off an edge.
+          */
+
+          int pos_x;
+          int pos_y;
+          int velocity_x;
+          int velocity_y;
+          void setup(){
+            size(800, 500);
+            pos_x = 400;
+            pos_y = 250;
+            velocity_x = 3;
+            velocity_y = 3;
+          }
+
+          void draw(){
+            background(255);
+            fill(0);
+            ellipse(pos_x, pos_y, 50, 50);
+
+            pos_x = pos_x + velocity_x;
+            pos_y = pos_y + velocity_y;
+
+            if ((pos_x > width - 25) || (pos_x < 25)){
+              // If velocity_x was negative before, what is it now?
+              // If velocity_x was positive before, what is it now?
+              velocity_x = -velocity_x;
+            }
+            if ((pos_y > height - 25) || (pos_y < 25)){
+              // If velocity_y was negative before, what is it now?
+              // If velocity_y was positive before, what is it now?
+              velocity_y = -velocity_y;
+            }
+          }
+
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Activity 4: if, else if, else </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/d1ed_DzdYss" frameborder="0" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Example Code</figcaption>
+        <pre>
+        <code>
+          /*
+            Assignment:  Take this code, and integrate it into the sketch with the sun moving
+            across the sky.  Instead of mouseX, use the variable keeping track of the sun's position.
+            If you have made the sky darken when the sun is behind a cloud, take that part out to
+            make it simpler.
+            */
+
+
+          int red, blue, green;
+
+          void setup() {
+            size(400, 600);
+            red = 0;
+            blue = 255;
+            green = 0;
+          }
+          void draw() {
+            background(red, green, blue);
+            if (mouseX > 3*width/4) {
+              blue = 50;
+              red = 75;
+            } else if (mouseX > width / 2) {
+              blue = 150;
+              red = 50;
+            } else if (mouseX > width / 4) {
+              blue = 200;
+              red = 50;
+            } else {
+              blue = 255;
+              red = 0;
+            }
+          }
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script></body>
+
+</html>

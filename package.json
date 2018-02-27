@@ -20,5 +20,11 @@
   "homepage": "https://github.com/burkegg/public_html#readme",
   "devDependencies": {
     "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1",
+    "tether": "^1.4.3"
   }
 }

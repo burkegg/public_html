@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title> Processing Tutorials: Math </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tutorials.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects/projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../projects/house.html">Draw a House</a>
+            <a class="dropdown-item" href="../projects/fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="../projects/aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> Math </h1>
+        </div>
+        <div class="col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Math 1: Basic sums </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XICTuK8HOV0" frameborder="0" allowfullscreen></iframe></div>
+
+
+    </div>
+
+
+  <div class="row example">
+    <figure>
+      <figcaption>No Code For this video</figcaption>
+      <pre>
+        <code>
+
+          <!-- Code goes here -->
+
+        </code>
+      </pre>
+    </figure>
+  </div>
+  <!-- End of section -->
+
+
+
+  <!-- Start copying here for a section -->
+  <div class="row section">
+    <div class="col">
+      <h2> Math 2: Sigma notation practice </h2>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <!-- Paste Video link here-->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/n9Q_bQ84Y1E" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <div class="row example">
+    <figure>
+      <figcaption>Sigma Practice</figcaption>
+      <pre>
+            <code>
+              You can modify this code to do the sum in this lesson's assignment.
+
+    int nums_to_sum[] = new int[5];
+    int the_sum = 0;
+    for(int i = 0; i < nums_to_sum.length; i++){
+      nums_to_sum[i] = (2*i + 1);
+    }
+    for (int i = 0; i < nums_to_sum.length; i++){
+      the_sum = the_sum + nums_to_sum[i];
+    }
+              <!-- Code goes here -->
+
+            </code>
+          </pre>
+    </figure>
+  </div>
+  <!-- End of section -->
+
+
+  <!-- Start copying here for a section -->
+  <div class="row section">
+    <div class="col">
+      <h2> Math 3: Introduction to integrals "area under the curve" </h2>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <!-- Paste Video link here-->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F6gGZeIUAJI" frameborder="0" allowfullscreen></iframe>
+
+
+    </div>
+  </div>
+
+  <div class="row example">
+    <figure>
+      <figcaption>Math Practice</figcaption>
+      <pre>
+                <code>
+
+                  <!-- Code goes here -->
+                  // A program to play with lines, sums, and the ideas of calculus.
+                  // Variables for our equations.
+                  float x = 0;
+                  float y = 0;
+                  float m = 1;
+                  float b = 0;
+                  int num_rects = 20;
+                  ArrayList<PVector> table = new ArrayList<PVector>();
+
+                  void setup() {
+                    size(500, 500);
+                    background(255);
+                  }
+                  void draw() {
+                    translate(0, height);
+                    scale(1, -1);
+
+                    for (int i = 0; i < width; i++) {
+                      y = m * x + b;
+                      strokeWeight(1);
+                      point(x, y);        // Just drawing the points - not storing them.
+                      if (x % 25 == 0) {
+                        table.add(new PVector(x, y));    //Actually storing the points.
+                      }
+                      x = x + 1;
+                    }
+                    for (int i = 0; i < table.size(); i++){
+                     float box_x = table.get(i).x;
+                     float box_y = table.get(i).y;
+                     println(box_x, box_y);
+                     fill(155, 0, 155);
+                     rect(box_x, 0, 25, box_y);
+
+                     // Your first assignment can go here.
+                     // Find the total area of all the rectangles added together.
+                     // Then double the number of rectangles (thus making them half as wide)
+                     // and do it again!
+                    }
+                    noLoop();
+                  }
+
+                </code>
+              </pre>
+    </figure>
+  </div>
+    </div>
+  <!-- End of section -->
+
+
+  <!-- Latest compiled and minified JavaScript -->
+
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script></body>
+
+</html>

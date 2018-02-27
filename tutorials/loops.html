@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title> Processing Tutorials: Loops </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tutorials.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects/projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../projects/house.html">Draw a House</a>
+            <a class="dropdown-item" href="../projects/fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="../projects/aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> for and while loops </h1>
+        </div>
+        <div class = "col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Loops 1:  Basic for loop </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Grb1eA5QjXM" frameborder="0" allowfullscreen></iframe>
+
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Example Code</figcaption>
+        <pre>
+        <code>
+
+          <!-- Code goes here -->
+          /*
+          Assignment:  Modify this code to make the ellipses go down
+       instead of going across.  Try to evenly space them all the way
+       down your canvas.
+       */
+
+      void setup() {
+        size(400, 600);
+        background(255);
+      }
+
+      void draw() {
+        for (int i = 0; i = 10; i++) {
+          //This will happen 10 times.
+          fill(0);
+          ellipse(30 * i, 50, 15, 15);
+        }
+      }
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+        <!-- Start copying here for a section -->
+        <div class="row section">
+          <div class="col">
+            <h2>   Loops 2:  Basic while loop </h2>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <!-- Paste Video link here-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dNP8Pi4gf-U" frameborder="0" allowfullscreen></iframe>
+
+
+          </div>
+        </div>
+
+        <div class="row example">
+          <figure>
+            <figcaption>While loop assignment</figcaption>
+            <pre>
+            <code>
+              /*
+                Assignment:  You have 4 programs total to make here:
+                1:  Make a for loop with a static set of shapes that increment
+                    in size and position.  The shapes should not be able to move.
+                2:  Make a for loop with a series of shapes (just use the ones from
+                    above!) but this time make them follow the mouse.
+                3:  Make a while loop with a static set of shapes.  This should execute
+                    EXACTLY ONE TIME inside your draw loop.
+                4:  Make a series of shapes with a while loop that moves around and
+                    follows the mouse.
+
+                I will put the hint below.
+             */
+
+            // Declare your variables here.
+
+            void setup() {
+              size(400, 600);
+              // If you want a static image in the while loop, you can initialize your
+              // variables here.
+
+            }
+
+            void draw() {
+              // If you want a dynamic image in the while loop, you can initialize your
+              // variables here.
+            }
+              <!-- Code goes here -->
+
+            </code>
+          </pre>
+          </figure>
+        </div>
+        <!-- End of section -->
+
+
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script></body>
+
+</html>

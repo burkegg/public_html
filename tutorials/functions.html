@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title> Processing Tutorials: Functions </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="tutorials.html">Tutorials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects/projects.html">Projects</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../projects/house.html">Draw a House</a>
+            <a class="dropdown-item" href="../projects/fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="../projects/aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> Functions </h1>
+        </div>
+        <div class = "col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+
+    <!-- Start copying here for a section -->
+    <div class="row section">
+      <div class="col">
+        <h2> Functions 1: Calculator </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bIBFky-lvdY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>    </div>
+
+
+      </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Starter Code</figcaption>
+        <pre>
+        <code>
+          void setup(){
+        size(300, 500);
+      }
+
+      void draw(){
+        background(255);
+        rect(100, 150, 30, 40);
+        float what_it_gave_back = addTwoNums(50, 30);
+        println(what_it_gave_back);
+        rect(200, 300, what_it_gave_back, what_it_gave_back);
+      }
+
+      float addTwoNums(float num1, float num2){
+        // Takes two numbers and returns the sum.
+        float theSum;
+        theSum = num1 + num2;
+        return theSum;
+      }
+
+      float subtractTwoNums(float num1, float num2){
+        // Takes two numbers and returns the difference.
+
+
+      }
+
+      float multTwoNums(float num1, float num2){
+        //
+
+      }
+
+      //  Here - make a function that will divide two numbers.
+
+          <!-- Code goes here -->
+
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+    <div class="row section">
+      <div class="col">
+        <h2> Functions 2: Bouncing Ball with functions </h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- Paste Video link here-->
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/2O_lkHGVP-A"
+        frameborder="0" allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+    <div class="row example">
+      <figure>
+        <figcaption>Starter Code</figcaption>
+        <pre>
+        <code>
+          int x_pos = 200;
+          int y_pos = 300;
+          int x_vel = 1;
+          int y_vel = 1;
+
+          void setup() {
+            size(500, 500);
+          }
+
+          void draw() {
+            background(255);
+            move();
+            display();
+            bounce();
+          }
+
+
+          void display() {
+            // Display the ball at its position.
+            fill(0);
+            ellipse(x_pos, y_pos, 45, 45);
+          }
+
+          void move() {
+            // Move the ball around.
+            x_pos = x_pos + x_vel;
+            y_pos = y_pos + y_vel;
+          }
+
+          void bounce() {
+            // This is the bounce part.
+            // Modify this so that something else happens when it bounces.
+            if ((x_pos <= 0) || (x_pos >= width)) {
+              x_vel = -x_vel;
+            }
+            if ((y_pos <= 0) || (y_pos >= width)) {
+              y_vel = -y_vel;
+            }
+          }
+          <!-- Code goes here -->
+
+        </code>
+      </pre>
+      </figure>
+    </div>
+    <!-- End of section -->
+
+
+
+
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script></body>
+
+</html>
