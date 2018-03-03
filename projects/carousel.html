@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <title> Projects Home </title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Beginning Coding</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html"><i class="fas fa-home"></i>Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../tutorials/tutorials.html"><i class="fas fa-clipboard-check"></i>Tutorials</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="projects.html"><i class="fas fa-microchip"></i>Projects<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>Jump to Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="house.html">Draw a House</a>
+            <a class="dropdown-item" href="fishtank.html">Fish Tank</a>
+            <a class="dropdown-item" href="aviator.html">Audacious Aviator Game</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="jumbotron">
+    <div class="container">
+      <div class="row row-header align">
+        <div class="col-12">
+          <h1> Projects Home </h1>
+        </div>
+        <div class="col col-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<div class = "container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="aviator.html"><img src="../images/aviator_image.JPG" alt="aviator game"></a>
+        <div class="carousel-caption">
+          <h2> Audacious Aviator </h2>
+          <p> Make the Audacious Aviator game and then fly! </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="fishtank.html"><img src="../images/fishtank_image.JPG" alt="fishtank"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="house.html"><img src="../images/house_image.JPG" alt="House project"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+    <div class = "btn-group" id = "carouselButtons">
+      <button class "btn btn-danger btn-sm" id="carousel-pause">
+        <span class = "fa fa-pause"></span>
+        <button class "btn btn-danger btn-sm" id="carousel-play">
+          <span class = "fa fa-play"></span>
+    </div>
+  </div>
+
+</div>
+
+
+  <!-- Card deck-->
+  <div class="container">
+    <!--Card group-->
+    <div class="card-deck  mt-4">
+
+      <!--Card-->
+      <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <a href="house.html">
+          <img class="img-fluid" src="../images/house_image.JPG" alt="Card image cap">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body">
+
+          <!--Title-->
+          <h4 class="card-title">Build a House</h4>
+
+          <!--Text-->
+          <p class="card-text">Practice the basics: shapes, coordinates, conditionals, and animation. Build a house with a sunrise and sunset!</p>
+
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <a href="house.html">
+            <button type="button" class="btn btn-light-blue btn-md">Build a house!</button>
+          </a>
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+      <!--Card-->
+      <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <a href="fishtank.html">
+            <img class="img-fluid" src="../images/fishtank_image.JPG" alt="Card image cap">
+
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Fishtank</h4>
+
+          <!--Text-->
+          <p class="card-text">Practice building a more complicated program. Use two classes of objects that interact. Skill up for the major projects!</p>
+
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <a href="fishtank.html">
+            <button type="button" class="btn btn-light-blue btn-md">Feed the fish!</button>
+          </a>
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+      <!--Card-->
+      <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <a href="aviator.html">
+            <img class="img-fluid" src="../images/aviator_image.JPG" alt="Card image cap">
+                  <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">Audacious Aviator</h4>
+
+          <!--Text-->
+          <p class="card-text">Make an interactive game. A bird flies through obstacles and clouds. Learn how to manage a more complex project. </p>
+
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <a href="aviator.html">
+            <button type="button" class="btn btn-light-blue btn-md">Let's fly!</button>
+          </a>
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Card group-->
+
+
+
+
+
+  </div>
+  <!-- Latest compiled and minified JavaScript -->
+
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
