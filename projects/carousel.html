@@ -62,49 +62,49 @@
   </header>
 
 
-  <div class = "container">
-    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+<div class = "container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#mycarousel" data-slide-to="1"></li>
-        <li data-target="#mycarousel" data-slide-to="2"></li>
-      </ul>
+    <ul class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
 
     <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="aviator.html"><img src="../images/aviator_image.JPG" alt="aviator game"></a>
-          <div class="carousel-caption">
-            <h2> Audacious Aviator </h2>
-            <p> Make the Audacious Aviator game and then fly! </p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <a href="fishtank.html"><img src="../images/fishtank_image.JPG" alt="fishtank"></a>
-        </div>
-        <div class="carousel-item">
-          <a href="house.html"><img src="../images/house_image.JPG" alt="House project"></a>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="aviator.html"><img src="../images/aviator_image.JPG" alt="aviator game"></a>
+        <div class="carousel-caption">
+          <h2> Audacious Aviator </h2>
+          <p> Make the Audacious Aviator game and then fly! </p>
         </div>
       </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#mycarousel" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#mycarousel" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-    <div class = "btn-group" id = "carouselButtons">
-      <button class "btn btn-danger btn-sm" id="carousel-pause">
-        <span class = "fa fa-pause"></span>
-        <button class "btn btn-danger btn-sm" id="carousel-play">
-          <span class = "fa fa-play"></span>
+      <div class="carousel-item">
+        <a href="fishtank.html"><img src="../images/fishtank_image.JPG" alt="fishtank"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="house.html"><img src="../images/house_image.JPG" alt="House project"></a>
       </div>
     </div>
 
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+
+    <button class="btn btn-danger btn-sm" id="carousel-button">
+       <span id="carousel-button-icon" class="fa fa-pause"></span>
+     </button>
+
   </div>
+
+</div>
 
 
   <!-- Card deck-->
@@ -215,24 +215,26 @@
   <!-- Latest compiled and minified JavaScript -->
 
 
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/tether/dist/js/tether.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
   <script>
-      $(document).ready(function(){
-          $("#mycarousel").carousel( { interval: 2000 } );
-          $("#carousel-pause").click(function(){
-              $("#mycarousel").carousel('pause');
-          });
-          $("#carousel-play").click(function(){
-              $("#mycarousel").carousel('cycle');
-          });
-      });
+  $("#carousel-button").click(function(event){
+    console.log("it was clicked");
+      if ($("#carousel-button").children().hasClass('fa-pause')) {
+        console.log("We are inside the if");
+          $("#mycarousel").carousel('pause');
+          $("#carousel-button").children().removeClass('fa-pause');
+          $("#carousel-button").children().addClass('fa-play');
+      }
+      else if ($("#carousel-button").children( 'span' ).hasClass('fa-play')){
+          $("#mycarousel").carousel('cycle');
+          $("#carousel-button").children().removeClass('fa-play');
+          $("#carousel-button").children().addClass('fa-pause');
+      }
+  });
   </script>
 </body>
 
